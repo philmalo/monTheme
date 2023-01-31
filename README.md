@@ -6,4 +6,4 @@
 - Créer un thème simple
 - Créer une structure Sass
 - Créer un minimum de 10 commits
-- Déployer le site local vers un serveur distant
+- Déployer le site local vers un serveur distant.
