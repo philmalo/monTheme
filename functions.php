@@ -6,5 +6,5 @@ function ajouter_styles() {
                 array(),//les dépendances avec les autres feuilles de style
                 filemtime(get_template_directory() . '/style.css'));//la version de la dernière feuille de style
 }
-add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
+add_action( 'wp_enqueue_scripts', 'ajouter_styles' );//similaire à un addEventListener en javascript
 ?>
