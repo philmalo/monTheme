@@ -14,4 +14,6 @@ if (have_posts()):
 endif;
 ?>
 </main>
-<?php get_footer() ?>
+<?php get_footer() 
+
+?>
