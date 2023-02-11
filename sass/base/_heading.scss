@@ -1,3 +1,38 @@
+*{
+    text-decoration: none;
+    color: unset;
+}
+header{
+    background-color: darkblue;
+    color: antiquewhite;
+}
+header>h1{
+    margin: 0;
+}
+
 h1{
     font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
+}
+
+.informations{
+    
+}
+
+.carte-information{
+    background-color: palegreen;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px palevioletred;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.carte-information div{
+    display: flex;
+    align-items: center;
+}
+
+.carte-information div img{
+    width: 300px;
+    height: 300px;
 }
