@@ -341,8 +341,32 @@ header > h1 {
   margin: 0;
 }
 
+header a:hover {
+  color: aquamarine;
+}
+
 h1 {
   font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
+}
+
+.conteneur-front-page {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.informations a:hover {
+  color: brown;
 }
 
 .carte-information {
@@ -362,4 +386,9 @@ h1 {
 .carte-information div img {
   width: 300px;
   height: 300px;
+}
+
+.erreur {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
