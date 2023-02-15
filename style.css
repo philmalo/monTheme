@@ -405,6 +405,7 @@ h1 {
 .menu-entete-container .menu {
   margin: 0;
   display: flex;
+  gap: 10px;
   list-style: none;
 }
 .menu-entete-container .menu .menu-item {
