@@ -401,24 +401,22 @@ h1 {
   font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
 }
 
-.conteneur-front-page {
+/* ---------------------------------------------------COMPOSANT */
+.menu-entete-container .menu {
+  margin: 0;
   display: flex;
-  gap: 20px;
-  justify-content: space-around;
-  margin-left: 20px;
-  margin-right: 20px;
+  list-style: none;
 }
-
-.informations {
-  display: flex;
-  flex-direction: column;
-  background-color: bisque;
-  border-radius: 10px;
-  padding: 10px;
+.menu-entete-container .menu .menu-item {
+  padding: 10px 15px 10px 0;
 }
-
-.informations a:hover {
-  color: brown;
+.menu-entete-container .menu .menu-item a {
+  padding: 5px;
+}
+.menu-entete-container .menu .menu-item a:hover {
+  background-color: white;
+  color: darkblue;
+  border-radius: 8px;
 }
 
 .carte-information {
@@ -441,9 +439,27 @@ h1 {
   height: 300px;
 }
 
+.informations {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.informations a:hover {
+  color: brown;
+}
+
 .erreur {
   display: flex;
   justify-content: center;
 }
 
-/* ---------------------------------------------------COMPOSANT *//*# sourceMappingURL=style.css.map */
+.conteneur-front-page {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+.menu-entete-container {
+    .menu {//ul
+        margin: 0;
+        display: flex;
+        list-style: none;
+        .menu-item{//li
+            padding: 10px 15px 10px 0;
+            a { //le lien
+                padding: 5px;
+            }
+            a:hover{
+                background-color: white;
+                color: darkblue;
+                border-radius: 8px;
+            }
+        }
+
+    }
+}

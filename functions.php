@@ -37,6 +37,4 @@ function enregistrement_des_menus(){
 add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
 //----------------------------------------------------------------------------------fin enregistrement des menus------//
 
-
-
 ?>
