@@ -448,18 +448,6 @@ h1 {
   height: 300px;
 }
 
-.informations {
-  display: flex;
-  flex-direction: column;
-  background-color: bisque;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.informations a:hover {
-  color: brown;
-}
-
 .erreur {
   display: flex;
   justify-content: center;
@@ -467,8 +455,20 @@ h1 {
 
 .conteneur-front-page {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
   margin-left: 20px;
   margin-right: 20px;
+}
+.conteneur-front-page .informations {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 1 0 300px;
+}
+.conteneur-front-page .informations a:hover {
+  color: brown;
 }/*# sourceMappingURL=style.css.map */

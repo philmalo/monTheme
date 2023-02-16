@@ -1,7 +1,21 @@
 .conteneur-front-page{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
     margin-left: 20px;
     margin-right: 20px;
+
+    .informations{
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        border-radius: 10px;
+        padding: 10px;
+        flex: 1 0 300px;
+    }
+    
+    .informations a:hover{
+        color: brown;
+    }
 }

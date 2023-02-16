@@ -3,19 +3,19 @@ get_header()
 ?>
 <main>
     <code>front-page.php</code>
+    <section class="conteneur-front-page">
     <?php 
     if (have_posts()):?>
-        <div class="conteneur-front-page">
         <?php while(have_posts()): the_post();?>
-            <section class="informations">
-            <h1><a href="<?php the_permalink();?>"><?= get_the_title()?></a></h1>
+            <article class="informations">
+                <h3><a href="<?php the_permalink();?>"><?= get_the_title()?></a></h3>
             
-            <?php echo wp_trim_words( get_the_excerpt(), 4);?>
-            <!-- wp_trim_words requiert un echo car il retourne une chaîne de caractères, get_the_excerpt fait un return, the_excerpt fait un echo par lui-même,d'où le get_the_excerpt -->
-            </section>
+                <p><?php echo wp_trim_words( get_the_excerpt(), 4);?></p>
+                <!-- wp_trim_words requiert un echo car il retourne une chaîne de caractères, get_the_excerpt fait un return, the_excerpt fait un echo par lui-même,d'où le get_the_excerpt -->
+            </article>
         <?php endwhile;?>
-        </div>
     <?php endif;?>
+    </section>
 </main>
 
 <?php
