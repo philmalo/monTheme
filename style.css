@@ -402,8 +402,16 @@ h1 {
 }
 
 /* ---------------------------------------------------COMPOSANT */
+.logomenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-entete-container {
+  margin-right: auto;
+}
 .menu-entete-container .menu {
-  margin: 0;
   display: flex;
   gap: 10px;
   list-style: none;
