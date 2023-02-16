@@ -4,8 +4,7 @@ get_header()
 <main>
     <code>front-page.php</code>
     <section class="conteneur-front-page">
-    <?php 
-    if (have_posts()):?>
+    <?php if (have_posts()):?>
         <?php while(have_posts()): the_post();?>
             <article class="informations">
                 <h3><a href="<?php the_permalink();?>"><?= get_the_title()?></a></h3>

@@ -466,6 +466,7 @@ h1 {
   flex-direction: column;
   background-color: bisque;
   border-radius: 10px;
+  box-shadow: inset 3px 3px 3px 3px grey;
   padding: 10px;
   flex: 1 0 300px;
 }
