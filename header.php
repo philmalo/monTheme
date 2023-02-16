@@ -9,10 +9,11 @@
 </head>
 <body>
     <header>
+        <?php the_custom_logo(); ?>
         <?php wp_nav_menu(array(
-            'menu' => 'entête',
-            'container' => 'nav'
-        )); ?>
+                            'menu' => 'entête',
+                            'container' => 'nav'
+                        )); ?>
         <h1><a href="<?php bloginfo($show = 'url'); ?>"><?php bloginfo($show = 'name') ?></a></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>

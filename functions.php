@@ -13,18 +13,16 @@ add_action( 'wp_enqueue_scripts', 'ajouter_styles' );//similaire à un addEventL
 add_theme_support( 'html5',
                     array(
                         'search-form',
-                        'comment-form',
-                        'comment-list',
                         'gallery',
                         'caption'
-                        ) );
+                    ) );
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo',
                     array( 
                         'height' => 150,
                         'width'  => 150,
-                        ) );
+                    ) );
 //--------------------------------------------------------------------------------------fin add theme support---------//
 
 //--------------------------------------------------------------------------------------enregistrement des menus------//
