@@ -2,9 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
+
 
     .informations{
         display: flex;
@@ -13,7 +14,9 @@
         border-radius: 10px;
         box-shadow: inset 3px 3px 3px 3px grey;
         padding: 10px;
-        flex: 1 0 300px;
+        //flex: 1 0 300px;
+        max-width: 200px;
+        min-height: 400px;
     }
     
     .informations a:hover{

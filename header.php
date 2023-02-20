@@ -8,6 +8,7 @@
     <?php wp_head();?>
 </head>
 <body>
+    <img src="" alt="">
     <header class="site__entete">
         <section class="logomenu">
             <?php the_custom_logo(); ?>
@@ -20,6 +21,6 @@
         </section>
 
 
-        <h1><a href="<?php bloginfo($show = 'url'); ?>"><?php bloginfo($show = 'name') ?></a></h1>
+        <h1><?php bloginfo($show = 'name') ?></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>
