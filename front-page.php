@@ -3,11 +3,12 @@ get_header()
 ?>
 <main>
     <code>front-page.php</code>
+
     <section class="conteneur-front-page">
-    <?php if (have_posts()):?>
-        <?php while(have_posts()): the_post();?>
+    <?php if (have_posts()):
+        while(have_posts()): the_post();?>
             <article class="informations">
-                <h3><?= get_the_title()?></h3>
+                <h3><?= get_the_title();?></h3>
             
                 <p><?php echo wp_trim_words( get_the_excerpt(), 4);?></p>
                 <a href="<?php the_permalink();?>">En savoir plus&#9758;</a>

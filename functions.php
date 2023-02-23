@@ -44,7 +44,7 @@ add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
  */
 function cidweb_modifie_requete_principal( $query ) {
     if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
-        $query->set( 'category_name', 'note-wp' );
+        $query->set( 'category_name', 'notes-wp' );
         $query->set( 'orderby', 'title' );
         $query->set( 'order', 'ASC' );
     }

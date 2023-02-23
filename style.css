@@ -401,7 +401,7 @@ h1 {
 }
 
 html {
-  background-image: url("images/endless-constellation.png");
+  background-image: url("images/endless-constellation.svg");
 }
 
 /* ---------------------------------------------------COMPOSANT */
@@ -463,25 +463,23 @@ html {
 .conteneur-front-page {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
 }
-.conteneur-front-page .informations {
+
+.informations a:hover {
+  color: brown;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
   background-color: bisque;
   border-radius: 10px;
   box-shadow: inset 3px 3px 3px 3px grey;
   padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem;
-}
-.conteneur-front-page .informations article {
-  border: 1px solid #aaa;
-  padding: 1rem;
-}
-.conteneur-front-page .informations a:hover {
-  color: brown;
+  max-width: 200px;
+  min-height: 400px;
 }/*# sourceMappingURL=style.css.map */
