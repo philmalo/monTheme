@@ -400,11 +400,19 @@ h1 {
   font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
 }
 
+html {
+  background-image: url("images/endless-constellation.png");
+}
+
 /* ---------------------------------------------------COMPOSANT */
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.recherche {
+  display: flex;
 }
 
 .menu-entete-container {

@@ -1,24 +1,24 @@
 <?php
 /**
- * modele search.php pour afficher les résultats de la recherche
+ * modele category.php permet d'afficher une archive par catégorie d'article
  */
-get_header()
-?>
+get_header()?>
 <main>
-    <code>search.php</code>
-    <section class="recherche">
+    <code>category.php</code>
+    <section class="blocflex">
+
         <?php 
         if (have_posts()):
             while(have_posts()): the_post();?>
             <article>
                 <h5><a href="<?php the_permalink();?>"><?= get_the_title()?></a></h5>
-                <?=wp_trim_words( get_the_excerpt(), 30);?>
+
+                <p><?=wp_trim_words( get_the_excerpt(), 10);?></p>
                 <!-- wp_trim_words requiert un echo car il retourne une chaîne de caractères, get_the_excerpt fait un return, the_excerpt fait un echo par lui-même,d'où le get_the_excerpt -->
-            </article>
-            <hr>
-            <?php endwhile;
-                endif;
-            ?>
+                </article>
+                <?php endwhile;
+                    endif;
+                ?>
     </section>
 </main>
 
