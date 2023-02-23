@@ -16,9 +16,12 @@
                 array(
                     'menu' => 'entête',
                     'container' => 'nav'
-                )); 
-            ?>
+                ));?>
+            <section class="recherche">
+                <?php get_search_form();?>
+            </section>
         </section>
+
 
 
         <h1><?php bloginfo($show = 'name') ?></h1>

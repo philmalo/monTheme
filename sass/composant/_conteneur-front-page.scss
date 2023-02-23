@@ -8,15 +8,27 @@
 
 
     .informations{
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         background-color: bisque;
         border-radius: 10px;
         box-shadow: inset 3px 3px 3px 3px grey;
         padding: 10px;
-        //flex: 1 0 300px;
-        max-width: 200px;
-        min-height: 400px;
+        // //flex: 1 0 300px;
+        // max-width: 200px;
+        // min-height: 400px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        // Cette déclaration sera meilleur quand min() sera mieux supporté
+        // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+        gap: 2rem;
+        margin: 2rem;
+
+        article {
+        border: 1px solid #aaa;
+        padding: 1rem;
+        }
     }
     
     .informations a:hover{
