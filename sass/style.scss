@@ -21,10 +21,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 /* --------------------------------------------------------BASE */
 @import "base/heading";
 
+/* ---------------------------------------------------VARIABLE */
+@import "variable/langage";
+
 /* ---------------------------------------------------COMPOSANT */
 
 @import "composant/entete";
 @import "composant/carte-information";
-// @import "composant/informations";
 @import "composant/erreur";
-@import "composant/conteneur-front-page";
+@import "composant/liste-articles";
+@import "composant/resultats";

@@ -1,0 +1,28 @@
+.resultats{
+    margin: 0 30px;
+}
+.resultats article{
+    display: flex;
+    flex-direction: column;
+    color: var(--ombre-pale);
+    background-color: var(--accent-sombre);
+    padding: 10px;
+}
+
+.resultats h5{
+    margin:0 0 10px 0;
+}
+
+.resultats article *+*{
+    margin-top: 10px;
+}
+
+.resultats a{
+    width: fit-content;
+    padding: 5px;
+    border-radius: 8px;
+}
+.resultats a:hover{
+    color: var(--ombre-sombre);
+    background-color: var(--ombre-pale);
+}

@@ -4,10 +4,10 @@ get_header()
 <main>
     <code>front-page.php</code>
 
-    <section class="conteneur-front-page">
+    <section class="liste-articles">
     <?php if (have_posts()):
         while(have_posts()): the_post();?>
-            <article class="informations">
+            <article>
                 <h3><?= get_the_title();?></h3>
             
                 <p><?php echo wp_trim_words( get_the_excerpt(), 4);?></p>

@@ -1,19 +1,30 @@
 .carte-information{
-    background-color: palegreen;
+    background-color: var(--accent-sombre);
     border-radius: 10px;
-    box-shadow: inset 0 0 4px palevioletred;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 5px;
+    box-shadow: inset 0 0 0 5px var(--accent-pale);
+    margin: 0 30px;
+    padding: 20px;
+    width: fit-content;
 }
 
-.carte-information div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.carte-information h1{
+    text-align: center;
 }
 
-.carte-information div img{
-    width: 300px;
-    height: 300px;
+.carte-information h2,h3{
+    margin-left: 10px
+}
+
+.carte-information li{
+    max-width: 150ch;
+}
+
+.carte-information ul *+*{
+    margin-top: 10px;
+}
+
+.carte-information pre{
+    margin:0 30px;
+    padding: 10px;
+    background-color: var(--ombre-sombre);
 }

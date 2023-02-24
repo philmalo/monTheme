@@ -43,20 +43,20 @@ p {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-
+header>h1,header>h2{
+    margin: 0;
+    text-align: center;
+    color: var(--ombre-pale);
+    margin-bottom: 10px;
+}
 
 *{
     text-decoration: none;
     color: unset;
 }
-header{
-    color: antiquewhite;
-}
-header>h1{
-    margin: 0;
-}
-header a:hover{
-    color: aquamarine;
+
+code{
+    color: var(--ombre-pale);
 }
 
 h1{
@@ -65,4 +65,8 @@ h1{
 
 html{
     background-image: url("images/endless-constellation.svg");
+}
+
+footer h3{
+    color: var(--ombre-pale);
 }

@@ -8,10 +8,10 @@
     <?php wp_head();?>
 </head>
 <body>
-    <img src="" alt="">
     <header class="site__entete">
-        <section class="logomenu">
+        <section>
             <?php the_custom_logo(); ?>
+            <input type="checkbox" class="gachette-menu-mobile">
             <?php wp_nav_menu(
                 array(
                     'menu' => 'entête',
@@ -21,9 +21,6 @@
                 <?php get_search_form();?>
             </section>
         </section>
-
-
-
         <h1><?php bloginfo($show = 'name') ?></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>
