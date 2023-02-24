@@ -1,9 +1,9 @@
 .liste-articles{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .liste-articles a{
@@ -35,10 +35,14 @@
     flex-direction: column;
 }
 
+.liste-articles article a{
+    margin-top: auto;
+}
+
 $layout-breakpoint-large: 1281px;
 @media (min-width: $layout-breakpoint-large){
 
     .liste-articles{
-        justify-content: space-around;
+        justify-content: left;
     }
 }

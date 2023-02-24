@@ -4,6 +4,10 @@ header img{
     display: none;
 }
 
+header>section{
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0))
+}
+
 input.gachette-menu-mobile{
     position: fixed;
     z-index: 1;
@@ -62,7 +66,6 @@ $layout-breakpoint-large: 1281px;
         justify-content: space-between;
         align-items: center;
         padding-right: 20px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0))
     }
     input.gachette-menu-mobile{
         display: none;

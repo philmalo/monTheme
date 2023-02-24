@@ -421,6 +421,10 @@ header img {
   display: none;
 }
 
+header > section {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+
 input.gachette-menu-mobile {
   position: fixed;
   z-index: 1;
@@ -483,7 +487,6 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     padding-right: 20px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   }
   input.gachette-menu-mobile {
     display: none;
@@ -558,9 +561,9 @@ nav a:hover {
 .liste-articles {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
-  margin: 0 30px;
+  margin: 0 20px;
 }
 
 .liste-articles a {
@@ -592,9 +595,13 @@ nav a:hover {
   flex-direction: column;
 }
 
+.liste-articles article a {
+  margin-top: auto;
+}
+
 @media (min-width: 1281px) {
   .liste-articles {
-    justify-content: space-around;
+    justify-content: left;
   }
 }
 .resultats {
@@ -632,4 +639,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   margin: 0 30px;
+}
+
+footer {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
 }/*# sourceMappingURL=style.css.map */
