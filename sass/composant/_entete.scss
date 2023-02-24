@@ -7,7 +7,6 @@ header img{
 input.gachette-menu-mobile{
     position: fixed;
     z-index: 1;
-    top: 20px;
     right: 20px;
     appearance: none;
     font-size: 35px;
@@ -62,7 +61,9 @@ $layout-breakpoint-large: 1281px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 20px;
+        padding-right: 20px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0))
+        //background-color: rgba(255,255,255, 0.1);
     }
     input.gachette-menu-mobile{
         display: none;
@@ -82,6 +83,7 @@ $layout-breakpoint-large: 1281px;
     }
     nav li{
         padding: 10px;
+        border-top: none;
     }
     nav a{
         background-color: var(--ombre-pale);
