@@ -4,7 +4,7 @@
  */
 get_header()
 ?>
-<main class="erreur">
+<main class="site__main">
     <code>404.php</code>
     <h1>Erreur 404 - page introuvable</h1>
 </main>

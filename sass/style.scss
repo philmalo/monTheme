@@ -18,13 +18,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 @import "normalize/normalize";
 @import "normalize/box-sizing";
 
-/* --------------------------------------------------------BASE */
+/* -------------------------------------------------------BASE */
 @import "base/heading";
 
 /* ---------------------------------------------------VARIABLE */
 @import "variable/langage";
 
-/* ---------------------------------------------------COMPOSANT */
+/* --------------------------------------------------COMPOSANT */
 
 @import "composant/entete";
 @import "composant/carte-information";
@@ -33,3 +33,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 @import "composant/resultats";
 @import "composant/item-unitaire";
 @import "composant/footer";
+
+/* -----------------------------------------------------LAYOUT */
+
+@import "layout/aside-contenu";

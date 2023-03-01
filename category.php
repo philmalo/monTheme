@@ -4,7 +4,7 @@
  */
 get_header()?>
 
-<main>
+<main class="site__main">
 <code>category.php</code>
     <section class="liste-articles">
         <?php

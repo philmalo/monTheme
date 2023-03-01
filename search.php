@@ -4,7 +4,7 @@
  */
 get_header()
 ?>
-<main>
+<main class="site__main">
     <code>search.php</code>
     <section class="resultats">
         <?php 

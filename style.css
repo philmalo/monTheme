@@ -334,7 +334,7 @@ html {
   box-sizing: border-box;
 }
 
-/* --------------------------------------------------------BASE */
+/* -------------------------------------------------------BASE */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
@@ -399,14 +399,6 @@ h1 {
   font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
 }
 
-html {
-  background-image: url("images/endless-constellation.svg");
-}
-
-footer h3 {
-  color: var(--ombre-pale);
-}
-
 /* ---------------------------------------------------VARIABLE */
 :root {
   --ombre-sombre: #330033;
@@ -416,7 +408,7 @@ footer h3 {
   --ombre-pale: #e8efe0;
 }
 
-/* ---------------------------------------------------COMPOSANT */
+/* --------------------------------------------------COMPOSANT */
 header img {
   display: none;
 }
@@ -553,19 +545,6 @@ nav a:hover {
   white-space: pre-wrap;
 }
 
-.erreur h1 {
-  text-align: center;
-  color: var(--ombre-pale);
-}
-
-.liste-articles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 0 20px;
-}
-
 .liste-articles a {
   background-color: var(--ombre-pale);
   color: var(--ombre-sombre);
@@ -643,4 +622,33 @@ nav a:hover {
 
 footer {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+}
+
+/* -----------------------------------------------------LAYOUT */
+.site__entete {
+  grid-area: header;
+  padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: antiquewhite;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: antiquewhite;
+}
+
+.site__aside {
+  grid-area: aside;
+  background-color: rgb(47, 148, 210);
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+  row-gap: 50px;
 }/*# sourceMappingURL=style.css.map */

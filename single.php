@@ -1,7 +1,7 @@
 <?php
 get_header()
 ?>
-<main>
+<main class="site__main">
     <code>single.php</code>
     <section class="item-unitaire">
         <?php if (have_posts()):
