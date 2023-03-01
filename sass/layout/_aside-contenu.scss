@@ -1,26 +1,5 @@
 // mise en page avec display: grid;
 
-.site__entete {
-    grid-area: header;
-    padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: antiquewhite;
-}
-
-.site__main {
-    grid-area: main;
-    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-}
-
-.site__footer {
-    grid-area: footer;
-    background-color: antiquewhite;
-}
-
-.site__aside {
-    grid-area: aside;
-    background-color: rgb(47, 148, 210);
-}
-
 // règle de style pour body ou un conteneur global
 .site {
     display: grid;
@@ -30,4 +9,37 @@
     "main"
     "footer";
     row-gap: 50px;
+}
+
+
+.site__entete {
+    grid-area: header;
+    // padding: 1rem clamp(1rem, 3vw, 20rem);
+    // background-color: antiquewhite;
+}
+
+.site__main {
+    grid-area: main;
+    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__footer {
+    grid-area: footer;
+    // background-color: antiquewhite;
+}
+
+.site__aside {
+    grid-area: aside;
+    background-color: rgb(47, 148, 210);
+}
+
+$layout-breakpoint-large: 1000px;
+@media (min-width: $layout-breakpoint-large){
+    .site{
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+    }
 }

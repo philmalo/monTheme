@@ -1,10 +1,19 @@
-// .liste-articles{
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 20px;
-//     justify-content: center;
-//     margin: 0 20px;
-// }
+.liste-articles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.liste-articles{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+// Cette déclaration sera meilleur quand min() sera mieux supporté
+// grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+gap: 2rem;
+margin: 2rem;
+}
 
 .liste-articles a{
     background-color: var(--ombre-pale);
@@ -39,10 +48,10 @@
     margin-top: auto;
 }
 
-$layout-breakpoint-large: 1281px;
-@media (min-width: $layout-breakpoint-large){
+// $layout-breakpoint-large: 1281px;
+// @media (min-width: $layout-breakpoint-large){
 
-    .liste-articles{
-        justify-content: left;
-    }
-}
+//     .liste-articles{
+//         justify-content: left;
+//     }
+// }

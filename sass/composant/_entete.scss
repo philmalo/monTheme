@@ -100,6 +100,10 @@ $layout-breakpoint-large: 1281px;
         justify-content: space-between;
         align-items: center;
     }
+
+    .site__aside nav{
+        flex-direction: column;
+    }
 }
 
 

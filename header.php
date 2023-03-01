@@ -24,3 +24,7 @@
         <h1><?php bloginfo($show = 'name') ?></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>
+    <aside class="site__aside">
+        <h3>Menu secondaire</h3>
+        <?php wp_nav_menu(array("menu" => "cours", "container" => "nav")) ?>
+    </aside>
