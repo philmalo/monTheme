@@ -28,7 +28,7 @@
     // background-color: antiquewhite;
 }
 
-.site__aside {
+.site__aside{
     grid-area: aside;
     background-color: rgb(47, 148, 210);
 }
@@ -41,5 +41,9 @@ $layout-breakpoint-large: 1000px;
     "header header"
     "aside main"
     "footer footer";
+    }
+    .site__aside ul{
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -516,9 +516,6 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
   }
-  .site__aside nav {
-    flex-direction: column;
-  }
 }
 .carte-information {
   background-color: var(--accent-sombre);
@@ -671,5 +668,9 @@ footer {
   .site {
     grid-template-columns: 30% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
+  }
+  .site__aside ul {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

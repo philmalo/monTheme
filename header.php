@@ -26,5 +26,18 @@
     </header>
     <aside class="site__aside">
         <h3>Menu secondaire</h3>
-        <?php wp_nav_menu(array("menu" => "cours", "container" => "nav")) ?>
+        <?php
+        $category = get_queried_object();
+        if (isset($category))
+        {
+            $leMenu = $category -> slug;
+            var_dump($leMenu);
+        }else{
+            $leMenu = "notes-wp";
+        }
+
+        wp_nav_menu(array(
+            "menu" => "notes-wp",
+            "container" => "nav"
+        ));?>
     </aside>

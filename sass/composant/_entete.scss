@@ -77,6 +77,7 @@ $layout-breakpoint-large: 1281px;
         flex-direction: row;
         margin-right: auto;
     }
+
     nav ul{
         display: flex;
         flex-direction: row;
@@ -101,9 +102,7 @@ $layout-breakpoint-large: 1281px;
         align-items: center;
     }
 
-    .site__aside nav{
-        flex-direction: column;
-    }
+
 }
 
 
