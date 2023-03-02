@@ -28,16 +28,14 @@
         <h3>Menu secondaire</h3>
         <?php
         $category = get_queried_object();
-        if (isset($category))
-        {
-            $leMenu = $category -> slug;
-            var_dump($leMenu);
-        }else{
-            $leMenu = "notes-wp";
+        if (isset($category)){
+            $leMenu = $category->slug;
         }
-
+        else{
+            $leMenu = "cours";
+        }
         wp_nav_menu(array(
-            "menu" => "notes-wp",
+            "menu" => $leMenu,
             "container" => "nav"
         ));?>
     </aside>

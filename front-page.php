@@ -7,13 +7,7 @@ get_header()
     <section class="liste-articles">
     <?php if (have_posts()):
         while(have_posts()): the_post();?>
-            <article>
-                <h3><?= get_the_title();?></h3>
-            
-                <p><?php echo wp_trim_words( get_the_excerpt(), 30);?></p>
-                <a href="<?php the_permalink();?>">En savoir plus&#9758;</a>
-                <!-- wp_trim_words requiert un echo car il retourne une chaîne de caractères, get_the_excerpt fait un return, the_excerpt fait un echo par lui-même,d'où le get_the_excerpt -->
-            </article>
+        <?php get_template_part("template-parts/categorie", "notes-wp");?>
         <?php endwhile;?>
     <?php endif;?>
     </section>
