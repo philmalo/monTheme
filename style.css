@@ -557,13 +557,6 @@ nav a:hover {
   margin: 0 20px;
 }
 
-.liste-articles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem;
-}
-
 .liste-articles a {
   background-color: var(--ombre-pale);
   color: var(--ombre-sombre);
@@ -595,6 +588,13 @@ nav a:hover {
 
 .liste-articles article a {
   margin-top: auto;
+}
+
+.liste-articles .galerie {
+  flex: 1 0 100%;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .resultats {
@@ -672,5 +672,8 @@ footer {
   .site__aside ul {
     display: flex;
     flex-direction: column;
+  }
+  .liste-articles {
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=style.css.map */

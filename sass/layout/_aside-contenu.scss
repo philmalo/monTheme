@@ -46,4 +46,8 @@ $layout-breakpoint-large: 1000px;
         display: flex;
         flex-direction: column;
     }
+
+    .liste-articles{
+        justify-content: space-around;
+    }
 }
