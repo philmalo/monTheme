@@ -6,6 +6,7 @@
     margin: 0 20px;
 }
 
+// //version grid qui marche moins bien? 
 // .liste-articles{
 // display: grid;
 // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -47,14 +48,6 @@
 .liste-articles article a{
     margin-top: auto;
 }
-
-// $layout-breakpoint-large: 1281px;
-// @media (min-width: $layout-breakpoint-large){
-
-//     .liste-articles{
-//         justify-content: left;
-//     }
-// }
 
 .liste-articles .galerie{
     flex: 1 0 100%;

@@ -1,7 +1,7 @@
 // mise en page avec display: grid;
 
 // règle de style pour body ou un conteneur global
-.site {
+body {
     display: grid;
     grid-template-columns: auto;
     grid-template-areas:
@@ -11,43 +11,110 @@
     row-gap: 50px;
 }
 
-
-.site__entete {
+header {
     grid-area: header;
     // padding: 1rem clamp(1rem, 3vw, 20rem);
     // background-color: antiquewhite;
 }
 
-.site__main {
+main {
     grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.site__footer {
+footer{
     grid-area: footer;
     // background-color: antiquewhite;
 }
 
-.site__aside{
+aside{
     grid-area: aside;
     background-color: rgb(47, 148, 210);
+    display: none;
 }
 
-$layout-breakpoint-large: 1000px;
+// // version prof BEM
+// .site {
+//     display: grid;
+//     grid-template-columns: auto;
+//     grid-template-areas:
+//     "header"
+//     "main"
+//     "footer";
+//     row-gap: 50px;
+// }
+
+
+// .site__entete {
+//     grid-area: header;
+//     // padding: 1rem clamp(1rem, 3vw, 20rem);
+//     // background-color: antiquewhite;
+// }
+
+// .site__main {
+//     grid-area: main;
+//     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+// }
+
+// .site__footer {
+//     grid-area: footer;
+//     // background-color: antiquewhite;
+// }
+
+// .site__aside{
+//     grid-area: aside;
+//     background-color: rgb(47, 148, 210);
+//     display: none;
+// }
+
+// $layout-breakpoint-large: 1000px; //version initiale
+$layout-breakpoint-large: 1281px; //version en lien avec la navigation 
 @media (min-width: $layout-breakpoint-large){
-    .site{
+    body{
     grid-template-columns: 30% auto;
     grid-template-areas:
     "header header"
     "aside main"
     "footer footer";
     }
-    .site__aside ul{
+
+
+    aside{
+        display: initial;
+    }
+    aside nav ul{
         display: flex;
         flex-direction: column;
+        gap: 10px;
+    }
+
+
+    aside nav a{
+        transition: 0.7s;
+    }
+
+    aside nav a:hover{
+        color: var(--ombre-pale);
     }
 
     .liste-articles{
         justify-content: space-around;
     }
+
+        // //version prof BEM
+    // .site{
+    // grid-template-columns: 30% auto;
+    // grid-template-areas:
+    // "header header"
+    // "aside main"
+    // "footer footer";
+    // }
+
+    // .site__aside{
+    //     display: initial;
+    // }
+    // .site__aside ul{
+    //     display: flex;
+    //     flex-direction: column;
+    // }
 }

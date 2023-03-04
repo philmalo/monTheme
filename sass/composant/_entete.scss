@@ -32,28 +32,53 @@ input.gachette-menu-mobile:not(:checked)~nav{
     display: none;
 }
 
-nav ul{
+header nav ul{
     display: block;
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
-nav li{
+header nav li{
     border-top: 1px solid var(--ombre-sombre);
 }
-nav a{
+header nav a{
     display: block;
     background-color: var(--ombre-pale);
     color: var(--ombre-sombre);
     text-align: center;
     padding: 8px 0;
+    transition: 0.7s;
 }
 
-nav a:hover{
+header nav a:hover{
     background-color: var(--ombre-sombre);
     color: var(--ombre-pale);
     box-shadow: inset 0 0 0 2px var(--ombre-pale);
 }
+
+// //ma nav originale
+// nav ul{
+//     display: block;
+//     list-style: none;
+//     padding-left: 0;
+//     margin: 0;
+// }
+// nav li{
+//     border-top: 1px solid var(--ombre-sombre);
+// }
+// nav a{
+//     display: block;
+//     background-color: var(--ombre-pale);
+//     color: var(--ombre-sombre);
+//     text-align: center;
+//     padding: 8px 0;
+// }
+
+// nav a:hover{
+//     background-color: var(--ombre-sombre);
+//     color: var(--ombre-pale);
+//     box-shadow: inset 0 0 0 2px var(--ombre-pale);
+// }
 
 //==============================menu full-screen==================
 $layout-breakpoint-large: 1281px;
@@ -73,22 +98,22 @@ $layout-breakpoint-large: 1281px;
     input.gachette-menu-mobile:not(:checked)~nav{
         display: flex;
     }
-    nav {
+    header nav {
         flex-direction: row;
         margin-right: auto;
     }
 
-    nav ul{
+    header nav ul{
         display: flex;
         flex-direction: row;
         gap: 10px;
         list-style: none;
     }
-    nav li{
+    header nav li{
         padding: 10px;
         border-top: none;
     }
-    nav a{
+    header nav a{
         background-color: var(--ombre-pale);
         color: var(--ombre-sombre);
         padding: 10px;
@@ -96,11 +121,41 @@ $layout-breakpoint-large: 1281px;
         box-shadow: inset 0 0 0 2px var(--ombre-sombre);
     }
     
-    nav:first-child{
+    header nav:first-child{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    // //ma nav originale
+    // nav {
+    //     flex-direction: row;
+    //     margin-right: auto;
+    // }
+
+    // nav ul{
+    //     display: flex;
+    //     flex-direction: row;
+    //     gap: 10px;
+    //     list-style: none;
+    // }
+    // nav li{
+    //     padding: 10px;
+    //     border-top: none;
+    // }
+    // nav a{
+    //     background-color: var(--ombre-pale);
+    //     color: var(--ombre-sombre);
+    //     padding: 10px;
+    //     border-radius: 8px;
+    //     box-shadow: inset 0 0 0 2px var(--ombre-sombre);
+    // }
+    
+    // nav:first-child{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
 
 
 }
