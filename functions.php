@@ -50,4 +50,25 @@ function cidweb_modifie_requete_principal( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+
+/**
+ * Permet de modifier les titres du menu "cours"
+ * @param $title : titre du choix menu
+ * @param $item : le choix global
+ * @param $args : objet qui représente la structure de menu 
+ * @param $depth : niveau des sous-menus
+ */
+
+function perso_menu_item_title($title, $item, $args) {
+    // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+    if($args->menu == 'cours') {
+// Modifier la longueur du titre en fonction de vos besoins
+        $title = wp_trim_words($title, 3, ' ... ');
+    }
+
+    return $title;
+}
+
+// add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 4); en enlevant le paramètre $depth dans la fonction, on doit changer le dernier paramètre de add_filter de 4 à 3 car il y en a juste 3 paramètres
+add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 ?>
