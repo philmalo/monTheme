@@ -2,8 +2,9 @@
     /**
      * template-part qui permettra d'afficher un bloc d'articles dans la classe liste-articles
      */
-
+    //TODO LE SIGLE EST LAID 
     $titre = get_the_title();
+    $sigle = substr($titre, 0,7);
     // if(substr($titre, 0, 1) == "0"){}
 ?>
 

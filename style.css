@@ -686,6 +686,6 @@ aside {
     color: var(--ombre-pale);
   }
   .liste-articles {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=style.css.map */

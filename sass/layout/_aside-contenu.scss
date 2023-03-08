@@ -98,7 +98,7 @@ $layout-breakpoint-large: 1281px; //version en lien avec la navigation
     }
 
     .liste-articles{
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
         // //version prof BEM

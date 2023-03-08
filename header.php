@@ -24,18 +24,4 @@
         <h1><?php bloginfo($show = 'name') ?></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>
-    <aside class="site__aside">
-        <h3>Menu secondaire</h3>
-        <?php
-        $category = get_queried_object();
-        if (isset($category)){
-            $leMenu = $category->slug;
-        }
-        else{
-            $leMenu = "cours";
-        }
-        wp_nav_menu(array(
-            "menu" => $leMenu,
-            "container" => "nav"
-        ));?>
-    </aside>
+<?php get_template_part("template-parts/aside"); ?>
