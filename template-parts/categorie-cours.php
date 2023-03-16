@@ -6,12 +6,14 @@
     $titre = get_the_title();
     $sigle = substr($titre, 0,7);
     $titreLong = substr($titre, 7, -5);
-    $duree = "90hrs";
+    if(preg_match('/\((.*?)\)/', $titre, $temps) == 1){
+        $duree = $temps[1];
+    }
 ?>
 
 <article>
     <h5><?= $titreLong?></h5>
     <p><?=wp_trim_words( get_the_excerpt(), 8);?></p>
     <h6><?=$duree;?></h6>
-    <a href="<?php the_permalink();?>">En savoir plus sur &#9758;<?= $sigle?></a>
+    <a href="<?php the_permalink();?>">Consulter &#9758;<?= $sigle?></a>
 </article>

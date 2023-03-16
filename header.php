@@ -9,18 +9,21 @@
 </head>
 <body class="site <?=(is_front_page() ? "no-aside":""); ?>">
     <header class="site__entete">
-        <section>
+        <div>
             <?php the_custom_logo(); ?>
-            <input type="checkbox" class="gachette-menu-mobile">
-            <?php wp_nav_menu(
-                array(
-                    'menu' => 'entête',
-                    'container' => 'nav'
-                ));?>
-            <section class="recherche">
-                <?php get_search_form();?>
+            <section class="navEntete">
+                <input type="checkbox" class="gachette-menu-mobile">
+                <?php wp_nav_menu(
+                    array(
+                        'menu' => 'entête',
+                        'container' => 'nav'
+                    ));?>
+                <section class="rechercheEntete">
+                    <?php get_search_form();?>
+                <!--</section>-->
+                </section>
             </section>
-        </section>
+        </div>
         <h1><?php bloginfo($show = 'name') ?></h1>
         <h2><?php bloginfo($show = 'description') ?></h2>
     </header>

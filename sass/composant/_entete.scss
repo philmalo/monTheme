@@ -4,8 +4,8 @@ header img{
     display: none;
 }
 
-header>section{
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0))
+header{
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
 }
 
 input.gachette-menu-mobile{
@@ -25,6 +25,7 @@ input.gachette-menu-mobile::after{
 input.gachette-menu-mobile:checked::after{
     content: "\2715";
 }
+
 input.gachette-menu-mobile:checked{
     color: var(--ombre-fonce);
 }
@@ -56,41 +57,22 @@ header nav a:hover{
     box-shadow: inset 0 0 0 2px var(--ombre-pale);
 }
 
-// //ma nav originale
-// nav ul{
-//     display: block;
-//     list-style: none;
-//     padding-left: 0;
-//     margin: 0;
-// }
-// nav li{
-//     border-top: 1px solid var(--ombre-sombre);
-// }
-// nav a{
-//     display: block;
-//     background-color: var(--ombre-pale);
-//     color: var(--ombre-sombre);
-//     text-align: center;
-//     padding: 8px 0;
-// }
+//==============================menu tablette=====================
 
-// nav a:hover{
-//     background-color: var(--ombre-sombre);
-//     color: var(--ombre-pale);
-//     box-shadow: inset 0 0 0 2px var(--ombre-pale);
-// }
-
-//==============================menu full-screen==================
-$layout-breakpoint-large: 1281px;
-@media (min-width: $layout-breakpoint-large){
+@media (min-width: 900px){
+    .navEntete{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
     header img{
         display: block;
     }
-    header>section{
+    header>div{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 20px;
     }
     input.gachette-menu-mobile{
         display: none;
@@ -98,10 +80,7 @@ $layout-breakpoint-large: 1281px;
     input.gachette-menu-mobile:not(:checked)~nav{
         display: flex;
     }
-    header nav {
-        flex-direction: row;
-        margin-right: auto;
-    }
+
 
     header nav ul{
         display: flex;
@@ -126,38 +105,20 @@ $layout-breakpoint-large: 1281px;
         justify-content: space-between;
         align-items: center;
     }
-
-    // //ma nav originale
-    // nav {
-    //     flex-direction: row;
-    //     margin-right: auto;
-    // }
-
-    // nav ul{
-    //     display: flex;
-    //     flex-direction: row;
-    //     gap: 10px;
-    //     list-style: none;
-    // }
-    // nav li{
-    //     padding: 10px;
-    //     border-top: none;
-    // }
-    // nav a{
-    //     background-color: var(--ombre-pale);
-    //     color: var(--ombre-sombre);
-    //     padding: 10px;
-    //     border-radius: 8px;
-    //     box-shadow: inset 0 0 0 2px var(--ombre-sombre);
-    // }
-    
-    // nav:first-child{
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
-
-
+    .rechercheEntete{
+        padding-right: 10px;
+    }
 }
+//==========================fin menu tablette=====================
 
 
+//==============================menu full-screen==================
+// $layout-breakpoint-large: 1281px;
+@media (min-width: 1281px){
+
+    .navEntete{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
