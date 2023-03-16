@@ -5,9 +5,10 @@
     //TODO améliorer le code, notamment $duree et $titrelong pour enlever la durée
     $titre = get_the_title();
     $sigle = substr($titre, 0,7);
-    $titreLong = substr($titre, 7, -5);
-    if(preg_match('/\((.*?)\)/', $titre, $temps) == 1){
+    $titreLong = substr($titre, 7);
+    if(preg_match('/(\(.*?\))/', $titre, $temps) == 1){
         $duree = $temps[1];
+        $titreLong = str_replace($temps[1], "", $titreLong);
     }
 ?>
 

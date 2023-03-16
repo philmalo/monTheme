@@ -65,7 +65,18 @@ function perso_menu_item_title($title, $item, $args) {
 // Modifier la longueur du titre en fonction de vos besoins
         $sigle = substr($title, 4, 3);
         $title = substr($title, 7);
-        $title = "<code>" . $sigle . "</code>" . "<p>" . wp_trim_words($title, 2, ' ... ') . "</p>";
+        if(preg_match('/(\(.*?\))/', $title, $temps) == 1){
+            $title = str_replace($temps[1], "", $title);
+        }
+        $title = "<code>" . $sigle . "</code>" . "<span> " . wp_trim_words($title, 2, ' ... ') . "</span>";
+    }
+
+    if($args->menu == "notes-wp"){
+        $numero = substr($title, 0,2);
+        $titrePropre = substr($title, 3);
+
+
+        $title = "<code>" . $numero . "</code>" . "<span> " . $titrePropre . "</span>";
     }
     //pour masquer le paragraphe en mode mo
     return $title;

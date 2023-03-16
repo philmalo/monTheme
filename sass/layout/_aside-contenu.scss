@@ -29,7 +29,9 @@ footer{
 
 aside{
     grid-area: aside;
-    background-color: rgb(47, 148, 210);
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
     display: none;
 }
 
