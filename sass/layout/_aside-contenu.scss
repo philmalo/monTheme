@@ -6,6 +6,7 @@ body {
     grid-template-columns: auto;
     grid-template-areas:
     "header"
+    "aside"
     "main"
     "footer";
     row-gap: 50px;
@@ -29,50 +30,37 @@ footer{
 
 aside{
     grid-area: aside;
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
     border-radius: 5px;
+}
+
+aside a{
+    transition: 0.7s;
+}
+
+aside a:hover{
+    color: var(--ombre-pale);
+}
+
+aside span{
     display: none;
 }
 
-// // version prof BEM
-// .site {
-//     display: grid;
-//     grid-template-columns: auto;
-//     grid-template-areas:
-//     "header"
-//     "main"
-//     "footer";
-//     row-gap: 50px;
-// }
+aside code{
+    color: var(--ombre-fonce);
+}
 
+aside ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
 
-// .site__entete {
-//     grid-area: header;
-//     // padding: 1rem clamp(1rem, 3vw, 20rem);
-//     // background-color: antiquewhite;
-// }
+@media (min-width: 1370px){
 
-// .site__main {
-//     grid-area: main;
-//     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-// }
-
-// .site__footer {
-//     grid-area: footer;
-//     // background-color: antiquewhite;
-// }
-
-// .site__aside{
-//     grid-area: aside;
-//     background-color: rgb(47, 148, 210);
-//     display: none;
-// }
-
-// $layout-breakpoint-large: 1000px; //version initiale
-$layout-breakpoint-large: 1281px; //version en lien avec la navigation 
-@media (min-width: $layout-breakpoint-large){
-
+    // la classe no-aside est appliquée dans le fichier header.php dans une condition si front-page on ajoute la classe sinon on a aucune classe
     .no-aside{
         grid-template-columns: auto;
         grid-template-areas:
@@ -80,7 +68,7 @@ $layout-breakpoint-large: 1281px; //version en lien avec la navigation
         "main"
         "footer";
     }
-    
+
     body{
     grid-template-columns: 20% auto;
     grid-template-areas:
@@ -89,43 +77,17 @@ $layout-breakpoint-large: 1281px; //version en lien avec la navigation
     "footer footer";
     }
 
-
-    aside{
+    aside span{
         display: initial;
     }
-    aside nav ul{
-        display: flex;
+
+    aside ul{
         flex-direction: column;
         gap: 10px;
-    }
-
-
-    aside nav a{
-        transition: 0.7s;
-    }
-
-    aside nav a:hover{
-        color: var(--ombre-pale);
+        padding-left: 10px;
     }
 
     .liste-articles{
         justify-content: flex-start;
     }
-
-        // //version prof BEM
-    // .site{
-    // grid-template-columns: 30% auto;
-    // grid-template-areas:
-    // "header header"
-    // "aside main"
-    // "footer footer";
-    // }
-
-    // .site__aside{
-    //     display: initial;
-    // }
-    // .site__aside ul{
-    //     display: flex;
-    //     flex-direction: column;
-    // }
 }

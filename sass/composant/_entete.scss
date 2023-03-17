@@ -19,9 +19,11 @@ input.gachette-menu-mobile{
     border-radius: 5px;
     color: var(--ombre-pale);
 }
+
 input.gachette-menu-mobile::after{
     content: "\2630";
 }
+
 input.gachette-menu-mobile:checked::after{
     content: "\2715";
 }
@@ -29,19 +31,22 @@ input.gachette-menu-mobile:checked::after{
 input.gachette-menu-mobile:checked{
     color: var(--ombre-fonce);
 }
+
 input.gachette-menu-mobile:not(:checked)~nav{
     display: none;
 }
 
-header nav ul{
+header ul{
     display: block;
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
-header nav li{
+
+header li{
     border-top: 1px solid var(--ombre-sombre);
 }
+
 header nav a{
     display: block;
     background-color: var(--ombre-pale);
@@ -56,9 +61,9 @@ header nav a:hover{
     color: var(--ombre-pale);
     box-shadow: inset 0 0 0 2px var(--ombre-pale);
 }
+//============================fin menu mobile=====================
 
-//==============================menu tablette=====================
-
+//=============================menu tablette======================
 @media (min-width: 900px){
     .navEntete{
         display: flex;
@@ -66,32 +71,37 @@ header nav a:hover{
         justify-content: flex-end;
         align-items: flex-end;
     }
+
+    input.gachette-menu-mobile{
+        display: none;
+    }
+
+    input.gachette-menu-mobile:not(:checked)~nav{
+        display: flex;
+    }
+
     header img{
         display: block;
     }
+
     header>div{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    input.gachette-menu-mobile{
-        display: none;
-    }
-    input.gachette-menu-mobile:not(:checked)~nav{
-        display: flex;
-    }
 
-
-    header nav ul{
+    header ul{
         display: flex;
         flex-direction: row;
         gap: 10px;
         list-style: none;
     }
-    header nav li{
+
+    header li{
         padding: 10px;
         border-top: none;
     }
+
     header nav a{
         background-color: var(--ombre-pale);
         color: var(--ombre-sombre);
@@ -99,12 +109,7 @@ header nav a:hover{
         border-radius: 8px;
         box-shadow: inset 0 0 0 2px var(--ombre-sombre);
     }
-    
-    header nav:first-child{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+
     .rechercheEntete{
         padding-right: 10px;
     }
@@ -112,8 +117,7 @@ header nav a:hover{
 //==========================fin menu tablette=====================
 
 
-//==============================menu full-screen==================
-// $layout-breakpoint-large: 1281px;
+//===========================menu full-screen=====================
 @media (min-width: 1281px){
 
     .navEntete{
@@ -122,3 +126,4 @@ header nav a:hover{
         align-items: center;
     }
 }
+//============================fin full-screen=====================

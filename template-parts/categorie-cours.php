@@ -10,6 +10,7 @@
         $duree = $temps[1];
         $titreLong = str_replace($temps[1], "", $titreLong);
     }
+
 ?>
 
 <article>
