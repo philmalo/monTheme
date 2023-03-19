@@ -14,18 +14,15 @@ body {
 
 header {
     grid-area: header;
-    // padding: 1rem clamp(1rem, 3vw, 20rem);
-    // background-color: antiquewhite;
 }
 
 main {
     grid-area: main;
-    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+    overflow: hidden;
 }
 
 footer{
     grid-area: footer;
-    // background-color: antiquewhite;
 }
 
 aside{

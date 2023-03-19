@@ -1,1 +1,0 @@
-garder juste le sigle pour les cours dans le menu secondaire avec 
