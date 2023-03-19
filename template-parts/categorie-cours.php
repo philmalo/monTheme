@@ -2,7 +2,6 @@
     /**
      * template-part qui permettra d'afficher un bloc d'articles dans la classe liste-articles
      */
-    //TODO améliorer le code, notamment $duree et $titrelong pour enlever la durée
     $titre = get_the_title();
     $sigle = substr($titre, 0,7);
     $titreLong = substr($titre, 7);
