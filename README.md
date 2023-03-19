@@ -1,14 +1,14 @@
-# TP1 (25 points)
+# TP1 (25 points) README AJUSTÉ
 
 ###### L'objectif du TP1 :
 
 - Créer une extension
 - Continuer de faire progresser votre thème
-- Déployer votre projet sur le serveur **_Siteground_**
+- Déployer votre projet sur le serveur **[cyclonicks.ca](https://cyclonicks.ca)**
 
-###### Ce projet vous permettra d\'améliorer globalement votre site en y intégrant les éléments suivants:
+###### Ce projet vous permettra d'améliorer globalement votre site en y intégrant les éléments suivants:
 
-- Une extension carrousel permettant de visionner une galerie d\'images
+- Une extension carrousel permettant de visionner une galerie d'images
 - Un pied de page
 - Un design de thème amélioré avec Sass et PHP
 - Amélioration des modèles:
@@ -25,9 +25,9 @@
 
 ###### Déroulement du projet
 
-> Les « **_commits_** » seront poussés dans le dépôt **_31w_** et **_31w-extension_** de votre github dans la branche **_tp1_**.
-> L\'ensemble des commits devra s\'étaler progressivement à partir de la journée de remise du devis jusqu\'à la remise finale du TP.
-> Un minimum de 10 commits pour le thème et pour l\'extension permettra d\'évaluer l\'évolution de votre projet
+> Les « **_commits_** » seront poussés dans le dépôt **[monTheme](https://github.com/Cyclonicks/monTheme/tree/tp1)** et **[carrousel-31w](https://github.com/Cyclonicks/carrousel-31w/tree/tp1)** de votre github dans la branche **_tp1_**.
+> L'ensemble des commits devra s'étaler progressivement à partir de la journée de remise du devis jusqu'à la remise finale du TP.
+> Un minimum de 10 commits pour le thème et pour l'extension permettra d'évaluer l'évolution de votre projet
 
 ###### Le serveur Siteground
 
@@ -38,11 +38,11 @@
 
 ### L'extension carrousel
 
-> L'extension permettra de visualiser l\'ensemble des images d\'une galerie d\'images spécifiques. Une fois la galerie d\'images créée, elle pourra être liée à l\'extension. En cliquant sur une image de la galerie, celle-ci apparaîtra dans une boîte modale animée munie de plusieurs contrôles (boutons radio, flèches) de navigation permettant de passer d\'une image à l\'autre. Le carrousel devra être adaptatif.
+> L'extension permettra de visualiser l'ensemble des images d'une galerie d'images spécifiques. Une fois la galerie d'images créée, elle pourra être liée à l'extension. En cliquant sur une image de la galerie, celle-ci apparaîtra dans une boîte modale animée munie de plusieurs contrôles (boutons radio, flèches) de navigation permettant de passer d'une image à l'autre. Le carrousel devra être adaptatif.
 
 ### Le pied de page: « **footer.php** »
 
-> La zone **_footer_** permettra d\'intégrer des liens conçus à partir de la fonctionnalité «menu» de Wordpress
+> La zone **_footer_** permettra d'intégrer des liens conçus à partir de la fonctionnalité «menu» de Wordpress
 
 ### Design amélioré
 

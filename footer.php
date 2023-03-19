@@ -8,9 +8,8 @@
     <code>pied de page</code>
     <?php 
         wp_footer();
-        $leMenu = "menu-footer";
         wp_nav_menu(array(
-            "menu" => $leMenu,
+            "menu" => "menu-footer",
             "container" => "nav"
         ));
     ?>
