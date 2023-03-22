@@ -7,7 +7,8 @@
     <title>Cyclonicks</title>
     <?php wp_head();?>
 </head>
-<body class="site <?=(is_front_page() ? "no-aside":""); ?>">
+<!--on a besoin d'ajouter la classe custom_background afin de pouvoir définir le background sur le body-->
+<body class="custom-background site <?=(is_front_page() ? "no-aside":""); ?>">
     <header class="site__entete">
         <div>
             <?php the_custom_logo(); ?>
