@@ -25,8 +25,12 @@
                 </section>
             </section>
         </div>
-        <h1><?php bloginfo($show = 'name') ?></h1>
-        <h2><?php bloginfo($show = 'description') ?></h2>
+        <?php 
+            $classe = "";
+            if(is_front_page() == false) $classe="invisible";
+        ?>
+        <h1 class="<?=$classe?>"><?php bloginfo($show = 'name') ?></h1>
+        <h2 class="<?=$classe?>"><?php bloginfo($show = 'description') ?></h2>
     </header>
 
 <?php if (!is_front_page()){

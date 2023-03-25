@@ -399,6 +399,10 @@ h1 {
   font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
 }
 
+.invisible {
+  display: none;
+}
+
 /* ---------------------------------------------------VARIABLE */
 :root {
   --ombre-sombre: #330033;
@@ -706,7 +710,6 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
-  row-gap: 50px;
 }
 
 header {
