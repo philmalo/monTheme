@@ -1,21 +1,13 @@
 <?php
 get_header()
 ?>
+
 <main class="site__main">
     <code>single.php</code>
     <section class="item-unitaire">
-        <?php if (have_posts()):
-            while(have_posts()): the_post();?>
-            <article class="carte-information">
-                <?php the_title('<h1>', '</h1>');?>
-                <div>
-                    <?php the_content(); //le contenu ?>
-                </div>
-            </article>
-            <?php
-            endwhile;
-        endif;
-        ?>
+            <?php $mon_single = "cours";
+            if(in_category('notes-wp')){$mon_single = "notes";}
+            get_template_part("template-parts/single", $mon_single); ?>
     </section>
 </main>
 

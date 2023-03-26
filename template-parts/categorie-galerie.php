@@ -5,5 +5,6 @@
 ?>
 
 <article class="galerie">
+    <code>categorie-galerie.php</code>
     <?= the_content();?>
 </article>

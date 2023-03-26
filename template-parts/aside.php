@@ -1,4 +1,5 @@
 <aside class="site__aside">
+    <code>aside.php</code>
     <h3>Menu secondaire</h3>
     <?php
         $leMenu = "notes-wp";

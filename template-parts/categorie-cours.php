@@ -13,9 +13,11 @@
 ?>
 
 <article>
+    <code>categorie-cours.php</code>
     <h5><?= $titreLong?></h5>
     <p><?=wp_trim_words( get_the_excerpt(), 8);?></p>
     <p><?php the_field('professeur');?></p>
+    <p><?php the_field('domaine');?></p>
     <h6><?=$duree;?></h6>
     <a href="<?php the_permalink();?>">Consulter &#9758;<?= $sigle?></a>
 </article>
