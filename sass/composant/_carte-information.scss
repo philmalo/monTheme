@@ -7,6 +7,14 @@
     width: 60%;
 }
 
+.carte-information a{
+    padding: 0 10px;
+    text-decoration: underline;
+}
+
+.carte-information a:hover{
+    color: var(--ombre-pale);
+}
 .carte-information h1{
     text-align: center;
 }
