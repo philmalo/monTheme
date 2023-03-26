@@ -1,4 +1,4 @@
-<h1 align="center"> Remise tp1 Philippe Malo </h1>
+<h1 align="center"> Remise exer3 Philippe Malo </h1>
 <p align="center"> code étudiant: 2296082 </p>
 
 ***
@@ -6,12 +6,12 @@
 > [cyclonicks.ca](https://cyclonicks.ca)
 
 #### Lien vers le dépôt github du site
-> [github.com/cyclonicks/monTheme](https://github.com/Cyclonicks/monTheme/tree/tp1)
+> [github.com/cyclonicks/monTheme](https://github.com/Cyclonicks/monTheme/tree/exer3)
 
-#### Lien vers le dépôt github de l'extension caroussel
-> [github.com/cyclonicks/carrousel-31w](https://github.com/Cyclonicks/carrousel-31w/tree/tp1)
 
-***
-## \*IMPORTANT\*
-> **Si ce n'est pas déjà fait, svp me fournir votre adresse courriel pour vous inviter sur le dépôt privé de l'extension caroussel. Vous n'y avez pas accès pour le moment.**
-***
+#### Mes ajouts additionnels
+
+- template-part pour la recherche, single-cours et single-notes-wp
+- apparence de tous les menus adaptés aux diverses dimensions d’écrans (layout et ajout/retrait de certaines composantes selon la dimension)
+- champs personnalisés intégrés aux articles de cours
+- manipulation des titres pour un affichage plus convivial
