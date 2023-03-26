@@ -82,12 +82,12 @@ function perso_menu_item_title($title, $item, $args) {
 
     if($args->menu == "notes-wp"){
         $numero = substr($title, 0,2);
-        $titrePropre = substr($title, 3);
+        $titreFormattage = str_replace("-", " ", $title);
+        $titrePropre = substr($titreFormattage, 3);
 
-
-        $title = "<code>" . $numero . "</code>" . "<span> " . $titrePropre . "</span>";
+        $title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
     }
-    //pour masquer le paragraphe en mode mo
+
     return $title;
 }
 

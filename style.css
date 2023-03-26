@@ -569,6 +569,10 @@ header nav a:hover {
   margin: 0 20px;
 }
 
+.liste-articles h5 {
+  flex-grow: 1;
+}
+
 .liste-articles a {
   background-color: var(--ombre-pale);
   color: var(--ombre-sombre);
