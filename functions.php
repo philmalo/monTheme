@@ -93,4 +93,42 @@ function perso_menu_item_title($title, $item, $args) {
 
 // add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 4); en enlevant le paramètre $depth dans la fonction, on doit changer le dernier paramètre de add_filter de 4 à 3 car il y en a juste 3 paramètres
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
+
+
+
+
+// Enregistrer le sidebar
+function enregistrer_sidebar() {
+    register_sidebar(array(
+        'name' => __( 'Pied de page 1', 'Mon-theme-philippe-malo' ),
+        'id' => 'pied-page-1', // le id c'est le "slug"
+        'description' => __( 'Une zone widget pour afficher des widgets dans le pied de page.', 'mon-theme-philippe-malo' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name' => __( 'Pied de page 2', 'Mon-theme-philippe-malo' ),
+        'id' => 'pied-page-2', // le id c'est le "slug"
+        'description' => __( 'Une zone widget pour afficher des widgets dans le pied de page.', 'mon-theme-philippe-malo' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name' => __( 'Pied de page 3', 'Mon-theme-philippe-malo' ),
+        'id' => 'pied-page-3', // le id c'est le "slug"
+        'description' => __( 'Une zone widget pour afficher des widgets dans le pied de page.', 'mon-theme-philippe-malo' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+}
+
+add_action( 'widgets_init', 'enregistrer_sidebar' );
 ?>

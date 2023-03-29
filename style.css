@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
 Theme Name: Mon thème Philippe Malo
-Theme URI: https://github.com/Cyclonicks/monTheme
+Theme URI: https:/cyclonicks.ca
 Author: Philippe Malo
-Author URI: https://github.com/Cyclonicks
+Author URI: https://github.com/Cyclonicks/monTheme
 Description: Introduction à la création d'un thème wordpress
 Requires at least: 6.1
 Tested up to: 6.1
@@ -694,6 +694,13 @@ footer nav a:hover {
   box-shadow: inset 0 0 0 2px var(--ombre-pale);
 }
 
+.widgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (min-width: 900px) {
   .navFooter {
     display: flex;
@@ -716,6 +723,11 @@ footer nav a:hover {
     padding: 10px;
     border-radius: 8px;
     box-shadow: inset 0 0 0 2px var(--ombre-sombre);
+  }
+  .widgets {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
   }
 }
 /* -----------------------------------------------------LAYOUT */

@@ -27,6 +27,12 @@ footer nav a:hover{
     color: var(--ombre-pale);
     box-shadow: inset 0 0 0 2px var(--ombre-pale);
 }
+.widgets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
 @media (min-width: 900px){
     .navFooter{
@@ -54,5 +60,11 @@ footer nav a:hover{
         padding: 10px;
         border-radius: 8px;
         box-shadow: inset 0 0 0 2px var(--ombre-sombre);
+    }
+    
+    .widgets{
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
     }
 }
