@@ -8,7 +8,6 @@
     <code>pied de page</code>
     <section class="widgets">
         <div><?php dynamic_sidebar( 'pied-page-1' ); ?></div>
-
         <div><?php dynamic_sidebar( 'pied-page-2' ); ?></div>
         <div><?php dynamic_sidebar( 'pied-page-3' ); ?></div>
     </section>

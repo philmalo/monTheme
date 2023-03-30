@@ -24,7 +24,7 @@ add_theme_support( 'custom-logo',
                         'width'  => 150,
                     ) );
 
-// pour ajouter une image directement via un dossier dans la racin du thème on ajoute l'information dans une variable $args qu'on passe à la suite de custom-background dans le add_theme_support
+// pour ajouter une image directement via un dossier dans la racine du thème on ajoute l'information dans une variable $args qu'on passe à la suite de custom-background dans le add_theme_support
 // $args = array(
 //     'default-color' => '0000ff',
 //     'default-image' => get_template_directory_uri() . '/images/wapuu.jpg',
@@ -33,6 +33,7 @@ add_theme_support( 'custom-logo',
 
 
 add_theme_support ('custom-background');
+add_theme_support( 'post-thumbnails' );
 //--------------------------------------------------------------------------------------fin add theme support---------//
 
 //--------------------------------------------------------------------------------------enregistrement des menus------//
