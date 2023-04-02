@@ -1,5 +1,14 @@
 footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-items: center;
     background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.3));
+}
+
+.navFooter{
+    width: 100%;
 }
 
 footer ul{
@@ -37,7 +46,7 @@ footer nav a:hover{
 @media (min-width: 900px){
     .navFooter{
         display: flex;
-        // flex-direction: column-reverse;
+        flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: flex-end;
     }
@@ -67,4 +76,26 @@ footer nav a:hover{
         gap: 30px;
         justify-content: center;
     }
+}
+
+@media (min-width: 1281px){
+    footer{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .widgets{
+        flex-direction: column;
+    }
+
+    footer ul{
+        flex-direction: column;
+    }
+    .navFooter{
+        width: fit-content;
+    }
+    code{
+        display: none;
+    };
 }

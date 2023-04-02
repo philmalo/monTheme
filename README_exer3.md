@@ -16,7 +16,7 @@
 
 ###### Déroulement du projet
 
-> Les « **_commits_** » seront poussés dans le dépôt [MonTheme](https://github.com/Cyclonicks/monTheme/) de votre github. Dans la branche [exer3](https://github.com/Cyclonicks/monTheme/tree/exer3)
+> Les « **_commits_** » seront poussés dans le dépôt [MonTheme](https://github.com/Cyclonicks/monTheme/) de votre github. Dans la branche [exer4](https://github.com/Cyclonicks/monTheme/tree/exer4)
 > L'ensemble des commits devra s'étaler progressivement à partir de la journée de remise du devis jusqu'à la remise finale de l'exercice #3 
 > Un minimum de 5 commits pour le thème  permettra d'évaluer l'évolution de votre projet
 

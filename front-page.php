@@ -3,7 +3,14 @@ get_header()
 ?>
 <main class="site__main">
     <code>front-page.php</code>
-
+    <section>
+        <?php wp_nav_menu(array(
+                                'menu' => 'evenement',
+                                'container' => 'nav',
+                                'container_class' => 'menuEvenement'
+                                )
+                            ); ?>
+    </section>
     <section class="liste-articles">
         <?php if (have_posts()):
             while(have_posts()): the_post();
