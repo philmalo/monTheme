@@ -414,7 +414,10 @@ h1 {
 
 /* --------------------------------------------------COMPOSANT */
 header img {
-  display: none;
+  height: 70px;
+  width: auto;
+  display: block;
+  margin-inline: auto;
 }
 
 header {
@@ -476,6 +479,9 @@ header nav a:hover {
 }
 
 @media (min-width: 900px) {
+  header img {
+    height: 100px;
+  }
   .navEntete {
     display: flex;
     flex-direction: column-reverse;
@@ -518,6 +524,9 @@ header nav a:hover {
   }
 }
 @media (min-width: 1281px) {
+  header img {
+    height: 150px;
+  }
   .navEntete {
     flex-direction: row;
     justify-content: flex-end;
