@@ -574,6 +574,12 @@ header nav a:hover {
   white-space: pre-wrap;
 }
 
+.carte-information img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
 .erreur h1 {
   text-align: center;
   color: var(--ombre-pale);

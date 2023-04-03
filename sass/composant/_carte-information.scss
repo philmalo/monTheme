@@ -37,3 +37,9 @@
     background-color: var(--ombre-sombre);
     white-space: pre-wrap;
 }
+
+.carte-information img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
