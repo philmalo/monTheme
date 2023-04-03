@@ -749,7 +749,7 @@ footer nav a:hover {
   .widgets {
     flex-direction: column;
   }
-  footer ul {
+  .navFooter ul {
     flex-direction: column;
   }
   .navFooter {
