@@ -69,31 +69,76 @@ add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
  * @param $depth : niveau des sous-menus
  */
 
-function perso_menu_item_title($title, $item, $args) {
-    // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
-    if($args->menu == 'cours') {
-// Modifier la longueur du titre en fonction de vos besoins
-        $sigle = substr($title, 4, 3);
-        $title = substr($title, 7);
-        if(preg_match('/(\(.*?\))/', $title, $temps) == 1){
-            $title = str_replace($temps[1], "", $title);
-        }
-        $title = "<code>" . $sigle . "</code>" . "<span> " . wp_trim_words($title, 2, ' ... ') . "</span>";
-    }
+// function perso_menu_item_title($title, $item, $args) {
+//     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+// //     if($args->menu == 'cours') {
+// // // Modifier la longueur du titre en fonction de vos besoins
+// //         $sigle = substr($title, 4, 3);
+// //         $title = substr($title, 7);
+// //         if(preg_match('/(\(.*?\))/', $title, $temps) == 1){
+// //             $title = str_replace($temps[1], "", $title);
+// //         }
+// //         $title = "<code>" . $sigle . "</code>" . "<span> " . wp_trim_words($title, 2, ' ... ') . "</span>";
+// //     }
 
-    if($args->menu == "notes-wp"){
-        $numero = substr($title, 0,2);
-        $titreFormattage = str_replace("-", " ", $title);
-        $titrePropre = substr($titreFormattage, 3);
+//     // if($args->menu == "notes-wp"){
+//     //     $numero = substr($title, 0,2);
+//     //     $titreFormattage = str_replace("-", " ", $title);
+//     //     $titrePropre = substr($titreFormattage, 3);
 
-        $title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
-    }
+//     //     $title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
+//     // }
 
-    return $title;
-}
+//     return $title;
+// }
 
 // add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 4); en enlevant le paramètre $depth dans la fonction, on doit changer le dernier paramètre de add_filter de 4 à 3 car il y en a juste 3 paramètres
-add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
+// add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
+
+
+
+function ajouter_description_class_menu( $items, $args ) {
+    // Vérifier si le menu correspondant est celui que vous souhaitez modifier
+    if ( 'evenement' === $args->menu ) {
+        $i = 0;
+        foreach ( $items as $item ) {
+            // // Récupérer le titre, la description et la classe personnalisée
+            $titre = $item->title;
+            $description = $item->description;
+            $classe = 'test__'. $i; // Remplacer par le nom de la classe souhaitée
+
+            // Ajouter la description et la classe personnalisée à l'élément de menu
+            $item->title .= '<span class="' . $classe . '"> - ' . $description . '</span>';
+            $i++;
+        }
+    }
+
+    if ('cours' === $args->menu){
+        foreach($items as $item){
+
+            $sigle = substr($item->title, 4, 3);
+            $titre = substr($item->title, 7);
+            if(preg_match('/(\(.*?\))/', $titre, $temps) == 1){
+                $titre = str_replace($temps[1], "", $titre);
+            }
+            $classe = 'lienCours';
+            $item->title = "<code>" . $sigle . "</code>" . "<span class=". $classe ."> " . wp_trim_words($titre, 2, ' ... ') . "</span>";
+        }
+    }
+
+
+    if ('notes-wp' === $args->menu){
+        foreach($items as $item){
+            $numero = substr($item->title, 0,2);
+            $titreFormattage = str_replace("-", " ", $item->title);
+            $titrePropre = substr($titreFormattage, 3);
+    
+            $item->title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
+        }
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'ajouter_description_class_menu', 10, 2 );
 
 
 
@@ -132,4 +177,6 @@ function enregistrer_sidebar() {
 }
 
 add_action( 'widgets_init', 'enregistrer_sidebar' );
+
+
 ?>

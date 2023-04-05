@@ -4,6 +4,9 @@ get_header()
 <main class="site__main">
     <code>front-page.php</code>
     <section>
+        <h1>Tp2</h1>
+        <h4>Auteur: Philippe Malo</h4>
+        
         <?php wp_nav_menu(array(
                                 'menu' => 'evenement',
                                 'container' => 'nav',
