@@ -871,6 +871,14 @@ aside ul {
   background-color: var(--ombre-pale);
 }
 
+.imageEvenement_0::after {
+  content: "door_open";
+}
+
+.imageEvenement_1::after {
+  content: "no_meeting_room";
+}
+
 @media (min-width: 900px) {
   .menuEvenement ul {
     flex-direction: row;
