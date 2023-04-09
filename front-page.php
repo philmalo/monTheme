@@ -3,10 +3,11 @@ get_header()
 ?>
 <main class="site__main">
     <code>front-page.php</code>
-    <section>
+    <section class="hero">
         <h1>Tp2</h1>
+        <h4>Titre du projet: Mon thème</h4>
         <h4>Auteur: Philippe Malo</h4>
-        
+        <h4>Groupe: 22633</h4>
         <?php wp_nav_menu(array(
                                 'menu' => 'evenement',
                                 'container' => 'nav',

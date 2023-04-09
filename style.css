@@ -413,6 +413,10 @@ h1 {
 }
 
 /* --------------------------------------------------COMPOSANT */
+.hero h1, h4 {
+  margin-left: 20px;
+}
+
 code:not(pre > code, li > code) {
   display: none;
 }
