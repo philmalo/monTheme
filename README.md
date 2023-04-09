@@ -1,4 +1,4 @@
-# <center> Exercice TP2 (5 points)
+# <center> TP2 (25 points)
 
 #### <center> Auteur: Philippe Malo e2996082
 #### <center> Titre: MonTheme
