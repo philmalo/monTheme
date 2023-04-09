@@ -61,48 +61,18 @@ function cidweb_modifie_requete_principal( $query ) {
 }
 add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
 
+
 /**
- * Permet de modifier les titres du menu "cours"
- * @param $title : titre du choix menu
- * @param $item : le choix global
- * @param $args : objet qui représente la structure de menu 
- * @param $depth : niveau des sous-menus
+ * Permet de modifier tous les menus à même la même méthode.
+ * @param $items les items associés à chaque menu
+ * @param $args la liste des menus
  */
-
-// function perso_menu_item_title($title, $item, $args) {
-//     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
-// //     if($args->menu == 'cours') {
-// // // Modifier la longueur du titre en fonction de vos besoins
-// //         $sigle = substr($title, 4, 3);
-// //         $title = substr($title, 7);
-// //         if(preg_match('/(\(.*?\))/', $title, $temps) == 1){
-// //             $title = str_replace($temps[1], "", $title);
-// //         }
-// //         $title = "<code>" . $sigle . "</code>" . "<span> " . wp_trim_words($title, 2, ' ... ') . "</span>";
-// //     }
-
-//     // if($args->menu == "notes-wp"){
-//     //     $numero = substr($title, 0,2);
-//     //     $titreFormattage = str_replace("-", " ", $title);
-//     //     $titrePropre = substr($titreFormattage, 3);
-
-//     //     $title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
-//     // }
-
-//     return $title;
-// }
-
-// add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 4); en enlevant le paramètre $depth dans la fonction, on doit changer le dernier paramètre de add_filter de 4 à 3 car il y en a juste 3 paramètres
-// add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
-
-
-
 function ajouter_description_class_menu( $items, $args ) {
     // Vérifier si le menu correspondant est celui que vous souhaitez modifier
     if ( 'evenement' === $args->menu ) {
+        // le $i c'est pour ajouter un chiffre pour chaque item du menu événement afin de pouvoir le cibler facilement dans le css avec la classe 
         $i = 0;
         foreach ( $items as $item ) {
-            // // Récupérer le titre, la description et la classe personnalisée
             $titre = $item->title;
             $description = $item->description;
             $classe = 'material-symbols-outlined imageEvenement_' . $i;
@@ -114,11 +84,14 @@ function ajouter_description_class_menu( $items, $args ) {
     }
 
     if ('cours' === $args->menu){
+
         foreach($items as $item){
 
             $sigle = substr($item->title, 4, 3);
             $titre = substr($item->title, 7);
+
             if(preg_match('/(\(.*?\))/', $titre, $temps) == 1){
+
                 $titre = str_replace($temps[1], "", $titre);
             }
             $classe = 'lienCours';
@@ -128,16 +101,26 @@ function ajouter_description_class_menu( $items, $args ) {
 
 
     if ('notes-wp' === $args->menu){
+
         foreach($items as $item){
+
             $numero = substr($item->title, 0,2);
+
+            if($numero[0] == "0"){
+
+                $numero = substr($numero, 1);
+            }
+
             $titreFormattage = str_replace("-", " ", $item->title);
             $titrePropre = substr($titreFormattage, 3);
-    
+
             $item->title = "<code>" . $numero . "</code>" . "<span> " . ucfirst($titrePropre) . "</span>";
         }
     }
+
     return $items;
 }
+
 add_filter( 'wp_nav_menu_objects', 'ajouter_description_class_menu', 10, 2 );
 
 
@@ -157,7 +140,7 @@ function enregistrer_sidebar() {
 
     register_sidebar(array(
         'name' => __( 'Pied de page 2', 'Mon-theme-philippe-malo' ),
-        'id' => 'pied-page-2', // le id c'est le "slug"
+        'id' => 'pied-page-2',
         'description' => __( 'Une zone widget pour afficher des widgets dans le pied de page.', 'mon-theme-philippe-malo' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -167,7 +150,7 @@ function enregistrer_sidebar() {
 
     register_sidebar(array(
         'name' => __( 'Pied de page 3', 'Mon-theme-philippe-malo' ),
-        'id' => 'pied-page-3', // le id c'est le "slug"
+        'id' => 'pied-page-3',
         'description' => __( 'Une zone widget pour afficher des widgets dans le pied de page.', 'mon-theme-philippe-malo' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',

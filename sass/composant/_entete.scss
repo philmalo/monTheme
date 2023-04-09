@@ -1,5 +1,10 @@
 
 //==============================menu mobile=======================
+
+code:not(pre>code, li>code){
+    display: none;
+};
+
 header img{
     height: 70px;
     width: auto;
@@ -12,7 +17,7 @@ header{
 }
 
 input.gachette-menu-mobile{
-    position: fixed;
+    position: absolute;
     z-index: 1;
     right: 20px;
     appearance: none;

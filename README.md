@@ -20,7 +20,9 @@
 (certains des objectifs réalisés englobent plusieurs des points cités ci-haut.)
 - Le site est complètement dynamique selon la consultation sur ordinateur de bureau ou téléphone cellulaire.
 - Les menus s'adaptent selon l'affichage pour être utilisables.
+- Les menus sont modifiés pour conserver que l'information importante (retrait des premiers 0).
 - Ajout du template-part pour la recherche.
+- Les dernières notes de cours ont été ajoutées.
 - Tous les titres sont traités tant dans les sous-menus que dans l'affichage de la liste des cours et dans la page single de chaque cours/note.
 - Le carrousel informe dynamiquement le numéro de l'image avec les boutons dans le bas. Si on est sur la deuxième image (au clic ou au déplacement dans le caroussel), le deuxième bouton est activé.
 
