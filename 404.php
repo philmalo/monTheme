@@ -4,9 +4,9 @@
  */
 get_header()
 ?>
-<main class="site__main erreur">
+<main class="site__main">
     <code>404.php</code>
-    <h1>Erreur 404 - page introuvable</h1>
+    <?php get_template_part("template-parts/categorie", "erreur404");?>
 </main>
 
 <?php
