@@ -417,7 +417,7 @@ h1 {
   margin-left: 20px;
 }
 
-code:not(pre > code, li > code) {
+code:not(pre > code, li > code, a > code) {
   display: none;
 }
 
