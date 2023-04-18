@@ -611,6 +611,64 @@ header nav a:hover {
   justify-content: center;
 }
 
+.erreur ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.erreur a {
+  transition: 0.7s;
+}
+
+.erreur a:hover {
+  color: var(--ombre-pale);
+}
+
+.erreur span {
+  display: none;
+}
+
+.erreur .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+  background: rgba(11, 241, 4, 0.7);
+  background: linear-gradient(338deg, rgba(11, 241, 4, 0.3995799003) 0%, rgb(0, 0, 0) 49%, rgba(142, 70, 255, 0.4023810208) 100%);
+}
+
+.erreur .banniere > img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  inset: 0;
+}
+
+.erreur .banniereTexte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 50vh;
+  width: 100%;
+}
+
+@media (min-width: 1370px) {
+  .no-aside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .erreur span {
+    display: initial;
+  }
+}
 .liste-articles {
   display: flex;
   flex-wrap: wrap;

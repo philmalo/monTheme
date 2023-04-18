@@ -9,7 +9,7 @@
     <?php wp_head();?>
 </head>
 <!--on a besoin d'ajouter la classe custom_background afin de pouvoir définir le background sur le body-->
-<body class="custom-background site <?=(is_front_page() ? "no-aside":""); ?>">
+<body class="custom-background site <?=(is_front_page() || is_404() ? "no-aside":""); ?>">
     <header class="site__entete">
         <div>
             <?php the_custom_logo(); ?>
@@ -34,7 +34,7 @@
         <h2 class="<?=$classe?>"><?php bloginfo($show = 'description') ?></h2>
     </header>
 
-<?php if (!is_front_page()){
+<?php if (!is_front_page() && !is_404()){
     get_template_part("template-parts/aside");
 }
     ?>
