@@ -14,22 +14,19 @@
                 <?php the_custom_logo(); ?>
             </picture>
             <p>cliquez sur le renard, il va vous ramener en toute sécurité dans un environnement familier</p>
-        </div>
-    </div>
-    <div class="recherche404">
-        <?php get_search_form();?>
-    </div>
-
-    <h2> Nos choix de cours</h2>
-    <?php
-    wp_nav_menu(array(
-                "menu" => "cours",
-                "container" => "nav",
-                ));?>
-    <h2>Les notes de cours</h2>
-    <?php
-        wp_nav_menu(array(
+            <div class="recherche404">
+                <?php get_search_form();?>
+            </div>
+            <h2> Nos choix de cours</h2>
+            <?php wp_nav_menu(array(
+                    "menu" => "cours",
+                    "container" => "nav",
+                    ));?>
+            <h2>Les notes de cours</h2>
+            <?php wp_nav_menu(array(
                     "menu" => "notes-wp",
                     "container" => "nav"
                     ));?>
+        </div>
+    </div>
 </section>
