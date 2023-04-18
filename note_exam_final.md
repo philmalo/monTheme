@@ -10,3 +10,11 @@
 - front page, ajouter quelque chose ?
 - si on veut modifier single on utilise get template part et in category
 - 
+
+git branch examfinal --done
+
+git checkout examfinal --done
+
+FAIRE DES COMMITS AU FUR ET À MESURE
+
+commande finale de git push: git push -u origin examfinal

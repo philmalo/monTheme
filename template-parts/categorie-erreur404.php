@@ -11,4 +11,18 @@
         <?php the_custom_logo(); ?>
     </picture>
     <p>cliquez sur le renard, il va vous ramener en toute sécurité dans un environnement familier</p>
+
+    <?php
+        $leMenu = "notes-wp";
+    wp_nav_menu(array(
+        "menu" => $leMenu,
+        "container" => "nav",
+        "class" => 'erreurNotes'
+    ));?>
+        <?php
+        $leMenu = "notes-wp";
+    wp_nav_menu(array(
+        "menu" => $leMenu,
+        "container" => "nav"
+    ));?>
 </section>
